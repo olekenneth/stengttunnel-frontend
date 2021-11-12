@@ -1,14 +1,14 @@
-import React, { FC, useState } from "react";
-import { IRoad } from "./types";
-import { Modal, Button } from "semantic-ui-react";
+import { FC, useState } from 'react'
+import { IRoad } from '../types'
+import { Modal, Button } from 'semantic-ui-react'
 
-type StatusProps = {
-  road: IRoad;
-};
+interface Props {
+  road: IRoad
+}
 
-const Status: FC<any> = (props: StatusProps) => {
-  const [open, setOpen] = useState<boolean>(false);
-  const { roadName } = props.road;
+const Status: FC<Props> = (props) => {
+  const [open, setOpen] = useState<boolean>(false)
+  const { roadName } = props.road
 
   return (
     <Modal
@@ -36,7 +36,7 @@ const Status: FC<any> = (props: StatusProps) => {
         </Button>
       </Modal.Actions>
     </Modal>
-  );
-};
+  )
+}
 
-export default Status;
+export default Status
